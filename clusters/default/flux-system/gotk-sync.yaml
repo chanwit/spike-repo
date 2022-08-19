@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@gitlab.com/ksn-gitops-poc/dev-21-jul-session
+  url: ssh://git@github.com/chanwit/spike-repo
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
