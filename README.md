@@ -1,13 +1,14 @@
 # Spike Repo
 
-## How to re-bootstrap when things go wrong.
-
 ```sh
 # create a new blank cluster
 kind create cluster
 
-# set the token
-export GITHUB_TOKEN=$(cat github_token)
+# set the token if you got one via GH client
+export GITHUB_TOKEN=$(yq '."github.com".oauth_token' ~/.config/gh/hosts.yml)
+
+# or you can do it manually
+export GITHUB_TOKEN=<your github token>
 
 # re-bootstrapping Flux
 flux bootstrap github \
