@@ -13,6 +13,6 @@ export GITHUB_TOKEN=$(cat github_token)
 flux bootstrap github \
   --owner=chanwit \
   --repository=spike-repo \
-  --path=./clusters/default \
+  --path=./manifests/clusters/default \
   --branch=main
 ```
